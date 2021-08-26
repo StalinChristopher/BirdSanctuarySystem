@@ -10,13 +10,20 @@ public class ViewLayer {
 	
 	public void printFlyable() {
 		for(Bird item: birdSanctuaryRepositroy.getAllBirds()) {
-			item.fly();
+			if(item.canFly) {
+//				((Flyable)item).fly();    alternate for the below code
+				item.fly();
+			}
+			
 		}
 	}
 	
 	public void printSwimmable() {
 		for(Bird item: birdSanctuaryRepositroy.getAllBirds()) {
-			item.swim();
+			if(item.canSwim) {
+//				((Flyable)item).fly();    alternate for the below code
+				item.swim();
+			}
 		}
 	}
 	
